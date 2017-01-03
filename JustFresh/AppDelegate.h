@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JFBaiduMap.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic,strong) BMKAddressComponent *bmkAddressComponent;
+@property (nonatomic) CLLocationDegrees latitude;
+@property (nonatomic) CLLocationDegrees longitude;
 
 @end
 

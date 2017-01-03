@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  JustFresh
+//
+//  Created by hgdq on 2016/12/27.
+//  Copyright © 2016年 hgdq. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "AppDelegate.h"
+// 弹框
+#include "JFMessageManager.h"
+// 工具类
+#include "JFTools.h"
+// 网络请求
+#include "JFNetwork.h"
+// 网络配置
+#include "JFNetworkConfig.h"
+// SDWebImage的封装
+#import "JFLoadImage.h"
+// 百度统计
+//#import "BaiduMobStat.h"
+// IQKeyboardManager  https://github.com/hackiftekhar/IQKeyboardManager
+#import "IQKeyboardManager.h"
+// http://www.oneapm.com/index.html
+#import <OneAPM/OneAPM.h>
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+//是否为调试模式
+#define DEBUG_MODE NO
+
+//日志输出
+#ifdef DEBUG_MODE
+#define JFLog(...) NSLog(@"\n%s\n-log:%@\n-------------------------- 我是分割线 --------------------------", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#define JFLog(...) do {  } while (0)
+#endif
